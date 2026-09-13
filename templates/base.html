@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Evaluación 1{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'app1:vista1' %}">Vista 1</a></li>
+            <li><a href="{% url 'app1:vista2' %}">Vista 2</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Programación Back End</p>
+    </footer>
+</body>
+</html>
